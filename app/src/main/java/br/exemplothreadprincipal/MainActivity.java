@@ -37,15 +37,15 @@ public class MainActivity extends Activity {
 					connection.setDoInput(true);
 			        connection.connect();
 			        InputStream input = connection.getInputStream();
-			        final Bitmap imagem = BitmapFactory.decodeStream(input);
+			        final Bitmap image = BitmapFactory.decodeStream(input);
 			        
-			        Log.i("livro", "baixou imagem.");
+			        Log.i("Image", "load image ..");
 			        
-			        final ImageView iv = (ImageView) findViewById(R.id.imagem);
+			        final ImageView iv = (ImageView) findViewById(R.id.image1);
 			        
 			        handler.post(new Runnable(){
 			        	public void run(){
-			        		iv.setImageBitmap(imagem);
+			        		iv.setImageBitmap(image);
 			        	}
 			        });
 				}
